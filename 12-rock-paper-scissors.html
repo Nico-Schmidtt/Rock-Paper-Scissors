@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/12-rock-paper-scissors.css">
+    </head>
+  
+  <body>
+    <p class="titel"> Rock Paper Scissors Game </p>
+    <button class="move-button" 
+    onclick = "
+    {let computerMove = (pickComputerMove());
+      console.log(computerMove);
+      outcomeGame('rock', computerMove);
+      }
+    "><img class="move-icon"
+     src="images-rock-paper-scissors/rock-emoji.png">
+  </button>
+    <button class="move-button"
+    onclick = "
+      {let computerMove = (pickComputerMove());
+      console.log(computerMove);
+      outcomeGame('paper', computerMove);
+      }
+    "><img class="move-icon"
+    src="images-rock-paper-scissors/paper-emoji.png">
+  </button>
+    <button class="move-button"
+    onclick = "
+      {let computerMove = (pickComputerMove());
+      console.log(computerMove);
+      outcomeGame('scissors', computerMove);
+      }
+    
+    "><img class="move-icon"
+    src="images-rock-paper-scissors/scissors-emoji.png">
+  </button>
+    <p class="result-view js-result">You win.</p>
+    <p class="js-moves">
+     
+    </p>
+    <p class="js-score score"></p>
+
+    <button class="reset-score-button"
+    onclick ="
+    score.wins = 0;
+    score.looses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+    result=''
+    updateResultElement();
+    updateMoveElement('', '');
+    ">Reset Score</button>
+
+
+    <script src="scripts/12-rock-paper-scissors.js"> 
+  
+    </script>
+  </body>
